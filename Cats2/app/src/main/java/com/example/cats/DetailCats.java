@@ -16,6 +16,14 @@ public class DetailCats extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_cats);
 
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("name");
+        String detail = intent.getStringExtra("detail");
+        int photo = intent.getIntExtra("photo");
+            
+        Toast.makeText(this, name+" = "+detail, Toast.LENGTH_SHORT).show();
+        
+        
         ImageView imgItemPhoto = findViewById(R.id.img_item_photo);
         TextView tvName = findViewById(R.id.tv_item_name);
         TextView tvDetail = findViewById(R.id.tv_item_detail);
@@ -24,10 +32,10 @@ public class DetailCats extends AppCompatActivity {
 
         if (cat != null) {
             Glide.with(this)
-                    .load(cat.getPhoto())
+                    .load(photo)
                     .into(imgItemPhoto);
-            tvName.setText(cat.getName());
-            tvDetail.setText(cat.getDetail());
+            tvName.setText(name);
+            tvDetail.setText(detail);
         }
 
         if (getSupportActionBar() != null) {
