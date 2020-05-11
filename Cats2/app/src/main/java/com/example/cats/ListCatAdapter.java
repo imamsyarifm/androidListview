@@ -47,7 +47,12 @@ public class ListCatAdapter extends RecyclerView.Adapter<ListCatAdapter.ListView
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onItemClickCallback.onItemClicked(cat);
+                //langsung saja taruh Intent disini
+                Intent moveIntent = new Intent(holder.itemView.getContext(), DetailCats.class);
+                moveIntent.putExtra("name", cat.getName());
+                moveIntent.putExtra("photo", cat.getPhoto());
+                moveIntent.putExtra("detail", cat.getDetail());
+                startActivity(moveIntent);
             }
         });
 
