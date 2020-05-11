@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Cats</string>
+    <string name="cats_detail">Detail Kucing</string>
+    <string name="cats_name">Nama Kucing</string>
+    <string name="detail">Detail</string>
+    <string name="profil">Profil</string>
+    <string name="imam_syarif_mulyono">Imam Syarif Mulyono</string>
+    <string name="email">imamsyarifm@gmail.com</string>
+</resources>
